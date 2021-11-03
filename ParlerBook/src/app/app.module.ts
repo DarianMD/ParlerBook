@@ -2,16 +2,15 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { ParlerModule } from './parler/parler.module';
+import { UsuarioRegistroComponent } from './usuario-registro/usuario-registro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-
+    UsuarioRegistroComponent
   ],
   imports: [
-    BrowserModule,
-    ParlerModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
