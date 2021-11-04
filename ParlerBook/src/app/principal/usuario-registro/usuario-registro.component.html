@@ -1,7 +1,8 @@
 <form (ngSumbit)="registro()" novalidate >
   <p>Usuario</p>
-  <input type="text" placeholder="Usuario" >
-  <p>Nombre</p>
+  <input type="text" placeholder="Usuario" [(ngModel)]="this.regla.usuario" name="nombre" >
+
+  <!--<p>Nombre</p>
   <input type="text" placeholder="Nombre">
   <p>Apellido</p>
   <input type="text" placeholder="Apellido">
@@ -25,15 +26,13 @@
   <input type="password" placeholder="********">
   <br>
   <label for="condiciones">Aceptar Condiciones</label>
-  <input type="checkbox" value="condiciones">
+  <input type="checkbox" value="condiciones"> -->
   <br>
-  <input type="submit" value="Registrar">
-
-
-
-
-
-
+  <input type="submit" value="Registrar" (click)="realizar()">
 
 
 </form>
+
+<li *ngFor="let nombre_heroe of personaje">
+  {{ nombre_heroe.usuario }}
+</li>
