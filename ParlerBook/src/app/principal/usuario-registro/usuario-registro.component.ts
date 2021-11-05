@@ -2,6 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../models/usuario';
 import { contr_usuario } from '../controladores/formulario/contr_form';
 
+export let personaje: Usuario[] = [
+  {usuario: "UsuarioX"/*, nombre: "Usuario", apellido: "Default", edad: 0, sexo: "", descripcion: "", correo: "", contraseña: "" */}
+
+];
+
+
 
 
 @Component({
@@ -16,20 +22,18 @@ export class UsuarioRegistroComponent implements OnInit {
   ngOnInit(): void {
   }
 
+   regla = new Usuario();
 
-  usr: string = "";
 
-  personaje: Usuario[] = [
-    {usuario: "UsuarioX"/*, nombre: "Usuario", apellido: "Default", edad: 0, sexo: "", descripcion: "", correo: "", contraseña: "" */}
+  pers = personaje;
 
-  ];
 
-  regla = new Usuario();
 
 
   registro(){
 
   }
+
 
 
   realizar(){
@@ -44,7 +48,7 @@ export class UsuarioRegistroComponent implements OnInit {
   }
 
   commitDates(){
-    this.personaje.push({usuario: this.regla.usuario})
+    personaje.push({usuario: this.regla.usuario})
   }
 
 }

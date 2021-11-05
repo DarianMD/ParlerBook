@@ -1,11 +1,13 @@
 import { Reglas } from "../../models/reglas_campos";
-import { long_max, long_min,regex } from "./contr_f_usr"
+import { usr } from "./contr_f_usr"
+
 
 let reglas = new Reglas();
 
+let usu = new usr();
 
   export function contr_usuario(usuario: string): boolean {
-    if(long_max(usuario) && long_min(usuario) && regex(usuario)){
+    if(usu.long_max(usuario) && usu.long_min(usuario) && usu.regex(usuario) && usu.usr_exist(usuario)){
       return true;
     }
     else{
