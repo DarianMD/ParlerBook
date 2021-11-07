@@ -5,6 +5,13 @@
   <input type="text" placeholder="Nombre" [(ngModel)]="this.regla.nombre" name="nombre">
   <p>Apellido</p>
   <input type="text" placeholder="Apellido" [(ngModel)]="this.regla.apellido" name="apellido">
+  <p>Edad</p>
+  <input type="text" placeholder="Edad" [(ngModel)]="this.regla.edad" name="edad">
+
+
+  <br>
+  <br>
+
   <!--<p>Nombre</p>
   <input type="text" placeholder="Nombre">
   <p>Apellido</p>
@@ -36,8 +43,14 @@
 
 </form>
 
+<br>
+<br>
 <li *ngFor="let nombre_heroe of pers">
   {{ nombre_heroe.usuario }}
   {{nombre_heroe.nombre}}
   {{nombre_heroe.apellido}}
+  {{nombre_heroe.edad}}
+  <img src="https://avatars.dicebear.com/api/initials/'{{nombre_heroe.foto}}'.svg" alt="50" height="50" width="50">
+
+
 </li>

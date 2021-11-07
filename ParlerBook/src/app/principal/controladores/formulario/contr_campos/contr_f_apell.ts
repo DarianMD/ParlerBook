@@ -3,7 +3,6 @@ import Swal from "sweetalert2"
 
 
 let reglas = new Reglas();
-let si = 0;
 
 
 
