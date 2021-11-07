@@ -1,16 +1,27 @@
 <form (ngSumbit)="registro()" novalidate >
   <p>Usuario</p>
-  <input type="text" placeholder="Usuario" [(ngModel)]="this.regla.usuario" name="usuario" >
+  <input type="text" placeholder="Ejemplo: UsuarioX" [(ngModel)]="this.regla.usuario" name="usuario" >
   <p>Nombre</p>
-  <input type="text" placeholder="Nombre" [(ngModel)]="this.regla.nombre" name="nombre">
+  <input type="text" placeholder="Ejemplo: Paco" [(ngModel)]="this.regla.nombre" name="nombre">
   <p>Apellido</p>
-  <input type="text" placeholder="Apellido" [(ngModel)]="this.regla.apellido" name="apellido">
+  <input type="text" placeholder="Ejemplo: Díaz" [(ngModel)]="this.regla.apellido" name="apellido">
   <p>Edad</p>
-  <input type="text" placeholder="Edad" [(ngModel)]="this.regla.edad" name="edad">
+  <input type="text" placeholder="Ejemplo: 23" [(ngModel)]="this.regla.edad" name="edad">
+  <p>Descripcion</p>
+  <input type="text" placeholder="Ejemplo: Me gusta la música" [(ngModel)]="this.regla.descripcion" name="descripcion">
+  <p>Correo</p>
+  <input type="text" placeholder="Ejemplo: Me gusta la música" [(ngModel)]="this.regla.correo" name="descripcion">
+  <p>Contraseña</p>
+  <input type="text" placeholder="Ejemplo: Me gusta la música" [(ngModel)]="this.regla.contrasena" name="descripcion">
+  <p>Confirmar</p>
+  <input type="text" placeholder="Ejemplo: Me gusta la música" [(ngModel)]="conf_contr" name="descripcion">
 
 
   <br>
   <br>
+
+
+
 
   <!--<p>Nombre</p>
   <input type="text" placeholder="Nombre">
@@ -45,12 +56,16 @@
 
 <br>
 <br>
-<li *ngFor="let nombre_heroe of pers">
-  {{ nombre_heroe.usuario }}
-  {{nombre_heroe.nombre}}
-  {{nombre_heroe.apellido}}
-  {{nombre_heroe.edad}}
-  <img src="https://avatars.dicebear.com/api/initials/'{{nombre_heroe.foto}}'.svg" alt="50" height="50" width="50">
+<li *ngFor="let usuario of pers">
+  {{ usuario.usuario }}
+  {{usuario.nombre}}
+  {{usuario.apellido}}
+  {{usuario.edad}}
+  <img src="https://avatars.dicebear.com/api/initials/'{{usuario.foto}}'.svg" alt="50" height="50" width="50">
+  {{usuario.descripcion}}
+  {{usuario.correo}}
+  {{usuario.contrasena}}
+
 
 
 </li>

@@ -3,12 +3,18 @@ import { usr } from "./contr_campos/contr_f_usr";
 import { nom } from "./contr_campos/contr_f_nom";
 import {apell } from "./contr_campos/contr_f_apell";
 import {edad} from "./contr_campos/contr_f_edad";
+import { desc } from "./contr_campos/contr_f_desc";
+import { correo } from "./contr_campos/contr_f_correo";
+import {contrasena} from "./contr_campos/contr_f_contraseña"
 
 
 let usu = new usr();
 let nomb = new nom();
 let ape = new apell();
 let eda = new edad();
+let des = new desc();
+let corr = new correo();
+let con = new contrasena();
 
 
   export function contr_usuario(usuario: string): boolean {
@@ -63,3 +69,30 @@ export function contr_foto(nombre:string, apellido: string, foto: string){
 
 }
 
+export function contr_desc(desc: string):boolean{
+  if(des.long_min(desc) && des.long_max(desc) && des.regex(desc)){
+    return true
+  }
+  else{
+    return false
+  }
+}
+
+
+export function contr_corr(cor: string): boolean{
+  if(corr.long_min(cor) && corr.long_max(cor) && corr.regex){
+    return true;
+  }
+  else{
+    return false
+  }
+}
+
+export function contr_contr(contr:string, conf_con:string): boolean{
+  if(con.long_min(contr) && con.long_max(contr) && con.comp_contr(contr, conf_con)){
+    return true
+  }
+  else{
+    return false
+  }
+}
