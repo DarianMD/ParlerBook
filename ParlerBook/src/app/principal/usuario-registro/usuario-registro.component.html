@@ -1,7 +1,10 @@
 <form (ngSumbit)="registro()" novalidate >
   <p>Usuario</p>
-  <input type="text" placeholder="Usuario" [(ngModel)]="this.regla.usuario" name="nombre" >
-
+  <input type="text" placeholder="Usuario" [(ngModel)]="this.regla.usuario" name="usuario" >
+  <p>Nombre</p>
+  <input type="text" placeholder="Nombre" [(ngModel)]="this.regla.nombre" name="nombre">
+  <p>Apellido</p>
+  <input type="text" placeholder="Apellido" [(ngModel)]="this.regla.apellido" name="apellido">
   <!--<p>Nombre</p>
   <input type="text" placeholder="Nombre">
   <p>Apellido</p>
@@ -35,4 +38,6 @@
 
 <li *ngFor="let nombre_heroe of pers">
   {{ nombre_heroe.usuario }}
+  {{nombre_heroe.nombre}}
+  {{nombre_heroe.apellido}}
 </li>

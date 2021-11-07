@@ -1,6 +1,6 @@
-import { Reglas } from "../../models/reglas_campos";
+import { Reglas } from "../../../models/reglas_campos";
 import Swal from "sweetalert2"
-import { personaje } from "../../usuario-registro/usuario-registro.component";
+import { personaje } from "../../../usuario-registro/usuario-registro.component";
 
 
 let reglas = new Reglas();
@@ -15,13 +15,16 @@ export class usr{
 
     }
 
+
+
     long_min(usuario:string): boolean {
     if(usuario.length > reglas.cp_min){
       return true
     }
     else{
       Swal.fire({
-        title: 'El campo es vacio'
+        icon: 'error',
+        title: usuario + 'El campo es vacio'
       })
       return false
     }
@@ -35,7 +38,9 @@ export class usr{
     }
     else{
       Swal.fire({
-        title: 'Maximo ' + reglas.cp_max_usr + ' caracteres'
+        icon: 'error',
+        title: usuario,
+        text: 'Maximo ' + reglas.cp_max_usr + ' caracteres'
       })
       return false
     }
@@ -44,12 +49,14 @@ export class usr{
 
 
     regex(usuario:string): boolean {
-    if(reglas.regexp.test(usuario)){
+    if(reglas.regex_usr.test(usuario)){
       return true
     }
     else{
       Swal.fire({
-        title: 'Contiene caracteres invalidos'
+        icon: 'error',
+        title: usuario,
+        text: 'Contiene caracteres invalidos'
       })
       return false
     }
@@ -57,21 +64,23 @@ export class usr{
   }
 
 
-  usr_exist(usr:string): boolean{
-
+  usr_exist(usuario:string): boolean{
     for (let i = 0; i < personaje.length; i++) {
-      if (usr === String(personaje.map( i => i.usuario)[i])) {
+      if (usuario === String(personaje.map( i => i.usuario)[i])) {
         si++;
       }
 
     }
+
     if(si === 0){
       return true;
     }
     else{
         si = 0;
         Swal.fire({
-          title: 'El usuario ya existe'
+          icon: 'error',
+          title: usuario,
+          text: 'El usuario ya existe'
         })
       return false;
     }
