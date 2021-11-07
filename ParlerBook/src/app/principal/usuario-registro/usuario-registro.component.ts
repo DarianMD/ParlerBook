@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from '../models/usuario';
-import { contr_apell, contr_contr, contr_corr, contr_desc, contr_edad, contr_foto, contr_nom, contr_usuario } from '../controladores/formulario/contr_form';
+import { Usuario } from './models/usuario';
+import { contr_apell, contr_contr, contr_corr, contr_desc, contr_edad, contr_foto, contr_nom, contr_usuario } from './controladores/formulario/contr_form';
 import Swal from 'sweetalert2';
-import { DomSanitizer } from '@angular/platform-browser';
 
 export let personaje: Usuario[] = [
 
@@ -77,6 +76,13 @@ export class UsuarioRegistroComponent implements OnInit {
   }
 
 
+
+  del_usr(array: any){
+    personaje.splice(array,1)
+  }
+
+
+    show: boolean = true
 
 
 

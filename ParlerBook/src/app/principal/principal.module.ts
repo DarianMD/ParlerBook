@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { UsuarioRegistroComponent } from './usuario-registro/usuario-registro.component';
+import { CpanelComponent } from './cpanel/cpanel.component';
 
 
 
 @NgModule({
   declarations: [
-    UsuarioRegistroComponent
+    UsuarioRegistroComponent,
+    CpanelComponent
 
   ],
   imports: [
@@ -16,7 +18,8 @@ import { UsuarioRegistroComponent } from './usuario-registro/usuario-registro.co
     FormsModule
   ],
   exports:[
-    UsuarioRegistroComponent
+    UsuarioRegistroComponent,
+    CpanelComponent
   ]
 })
 export class PrincipalModule { }

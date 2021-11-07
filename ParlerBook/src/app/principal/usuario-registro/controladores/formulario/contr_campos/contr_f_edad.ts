@@ -1,4 +1,4 @@
-import { Reglas } from "../../../models/reglas_campos";
+import { Reglas } from "../../../../usuario-registro/models/reglas_campos";
 import Swal from "sweetalert2"
 
 let reglas = new Reglas();

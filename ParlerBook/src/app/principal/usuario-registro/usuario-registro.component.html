@@ -56,16 +56,22 @@
 
 <br>
 <br>
-<li *ngFor="let usuario of pers">
-  {{ usuario.usuario }}
-  {{usuario.nombre}}
-  {{usuario.apellido}}
-  {{usuario.edad}}
-  <img src="https://avatars.dicebear.com/api/initials/'{{usuario.foto}}'.svg" alt="50" height="50" width="50">
-  {{usuario.descripcion}}
-  {{usuario.correo}}
-  {{usuario.contrasena}}
+<div *ngFor="let usuario of pers">
+
+  <p> {{ usuario.usuario }}</p>
+    <p>{{usuario.nombre}}</p>
+    <p> {{usuario.apellido}}</p>
+    <p>  {{usuario.edad}}</p>
+    <p><img src="https://avatars.dicebear.com/api/initials/'{{usuario.foto}}'.svg" alt="50" height="50" width="50"></p>
+    <p> {{usuario.descripcion}}</p>
+    <p>{{usuario.correo}}</p>
+    <p>{{usuario.contrasena}}</p>
 
 
 
-</li>
+  <button (click)="del_usr(usuario)">Eliminar</button>
+
+
+
+
+</div>

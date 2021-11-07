@@ -1,11 +1,11 @@
-import { Reglas } from "../../../models/reglas_campos";
+import { Reglas } from "../../../../usuario-registro/models/reglas_campos";
 import Swal from "sweetalert2"
 
 
 let reglas = new Reglas();
 
 
-export class correo{
+export class desc{
 
     constructor(){
 
@@ -13,7 +13,7 @@ export class correo{
 
 
     long_min(desc:string): boolean {
-    if(desc.length > reglas.cp_min_correo){
+    if(desc.length > reglas.cp_min_desc){
       return true
     }
     else{
@@ -27,14 +27,14 @@ export class correo{
   }
 
   long_max(desc:string): boolean {
-    if(desc.length <= reglas.cp_max_correo){
+    if(desc.length <= reglas.cp_max_dec){
       return true
     }
     else{
       Swal.fire({
         icon: 'error',
         title: desc,
-        text: 'Maximo ' + reglas.cp_max_usr + ' caracteres'
+        text: 'Maximo ' + reglas.cp_max_dec + ' caracteres'
       })
       return false
     }
@@ -42,7 +42,7 @@ export class correo{
   }
 
   regex(desc:string): boolean {
-    if(reglas.regex_correo.test(desc)){
+    if(reglas.regex_nom.test(desc)){
       return true
     }
     else{
@@ -55,8 +55,6 @@ export class correo{
     }
 
   }
-
-
 
 
 

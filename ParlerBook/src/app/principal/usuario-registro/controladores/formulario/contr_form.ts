@@ -5,7 +5,7 @@ import {apell } from "./contr_campos/contr_f_apell";
 import {edad} from "./contr_campos/contr_f_edad";
 import { desc } from "./contr_campos/contr_f_desc";
 import { correo } from "./contr_campos/contr_f_correo";
-import {contrasena} from "./contr_campos/contr_f_contraseña"
+import {contrasena} from "./contr_campos/contr_f_contraseña";
 
 
 let usu = new usr();

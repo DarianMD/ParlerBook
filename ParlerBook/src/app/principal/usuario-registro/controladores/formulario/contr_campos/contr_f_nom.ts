@@ -1,41 +1,39 @@
-import { Reglas } from "../../../models/reglas_campos";
+import { Reglas } from "../../../../usuario-registro/models/reglas_campos";
 import Swal from "sweetalert2"
 
 
 let reglas = new Reglas();
 
 
-
-
-export class apell{
+export class nom{
 
     constructor(){
 
     }
 
 
-    long_min(apellido:string): boolean {
-    if(apellido.length > reglas.cp_min){
+    long_min(nombre:string): boolean {
+    if(nombre.length > reglas.cp_min){
       return true
     }
     else{
       Swal.fire({
         icon: 'error',
-        title: apellido + 'El campo es vacio'
+        title: nombre + 'El campo es vacio'
       })
       return false
     }
 
   }
 
-  long_max(apellido:string): boolean {
-    if(apellido.length <= reglas.cp_max_usr){
+  long_max(nombre:string): boolean {
+    if(nombre.length <= reglas.cp_max_usr){
       return true
     }
     else{
       Swal.fire({
         icon: 'error',
-        title: apellido,
+        title: nombre,
         text: 'Maximo ' + reglas.cp_max_usr + ' caracteres'
       })
       return false
@@ -43,21 +41,22 @@ export class apell{
 
   }
 
-
-    regex(apellido:string): boolean {
-    if(reglas.regex_usr.test(apellido)){
+  regex(nombre:string): boolean {
+    if(reglas.regex_nom.test(nombre)){
       return true
     }
     else{
       Swal.fire({
         icon: 'error',
-        title: apellido,
+        title: nombre,
         text: 'Contiene caracteres invalidos'
       })
       return false
     }
 
   }
+
+
 
 
 

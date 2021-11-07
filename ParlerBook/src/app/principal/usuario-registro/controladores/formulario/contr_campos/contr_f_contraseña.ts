@@ -1,4 +1,4 @@
-import { Reglas } from "../../../models/reglas_campos";
+import { Reglas } from "../../../../usuario-registro/models/reglas_campos";
 import Swal from "sweetalert2"
 
 
@@ -13,13 +13,14 @@ export class contrasena{
 
 
     long_min(contrasena:string): boolean {
-    if(contrasena.length > reglas.cp_min_desc){
+    if(contrasena.length >= reglas.cp_min_desc){
       return true
     }
     else{
       Swal.fire({
         icon: 'error',
-        title: contrasena + 'El campo es vacio'
+        title: contrasena,
+        text: 'Minimo ' + reglas.cp_min_desc + ' caracteres'
       })
       return false
     }

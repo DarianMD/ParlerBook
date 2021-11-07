@@ -1,6 +1,6 @@
-import { Reglas } from "../../../models/reglas_campos";
+import { Reglas } from "../../../../usuario-registro/models/reglas_campos";
 import Swal from "sweetalert2"
-import { personaje } from "../../../usuario-registro/usuario-registro.component";
+import { personaje } from "../../../../usuario-registro/usuario-registro.component";
 
 
 let reglas = new Reglas();
