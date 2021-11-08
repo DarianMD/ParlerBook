@@ -8,14 +8,7 @@ export class Usuario{
   correo: string = "";
   contrasena: string = "";
 
-  /*nombre: string;
-  apellido: string;
-  edad: number;
-  sexo: string;
-  descripcion: string;
-  correo: string;
-  contraseña: string;*/
-
+ 
 
   constructor(){
 
