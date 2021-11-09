@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { personaje } from '../usuario-registro/usuario-registro.component';
+
 
 @Component({
   selector: 'app-usuario-mostrar',
@@ -11,5 +13,12 @@ export class UsuarioMostrarComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  @Input() item = personaje
+
+  pers = personaje;
+
+  show: boolean = false;
+
 
 }

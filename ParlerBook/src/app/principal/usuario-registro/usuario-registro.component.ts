@@ -4,7 +4,7 @@ import { contr_apell, contr_contr, contr_corr, contr_desc, contr_edad, contr_fot
 import Swal from 'sweetalert2';
 
 export let personaje: Usuario[] = [
-
+ {usuario: "Paco", nombre:"pacos", apellido:"pacos", edad: 20, descripcion: "sexo duro",foto: "paco",correo: "darian@gmail.com", contrasena: "1234"}
 ];
 
 

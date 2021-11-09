@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module'; // CLI imports AppRoutingModule
 
 import { PrincipalModule } from './principal/principal.module';
+import { UsuarioMostrarComponent } from './principal/usuario-mostrar/usuario-mostrar.component';
 
 
 
@@ -13,6 +14,7 @@ import { PrincipalModule } from './principal/principal.module';
 @NgModule({
   declarations: [
     AppComponent,
+    UsuarioMostrarComponent,
 
 
   ],

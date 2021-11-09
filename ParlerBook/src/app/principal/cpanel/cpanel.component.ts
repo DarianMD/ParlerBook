@@ -16,6 +16,7 @@ export class CpanelComponent implements OnInit  {
   @Input() item = personaje
 
   pers = personaje;
+  
 
 
   del_usr(array: any){
