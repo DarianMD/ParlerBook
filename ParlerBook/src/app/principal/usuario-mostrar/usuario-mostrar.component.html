@@ -1,13 +1,13 @@
 <p>usuario-mostrar works!</p>
 
 
-<div *ngFor="let usuario of pers">
+<div *ngFor="let usuario of item">
 
   <p> {{ usuario.usuario }}</p>
 
 
   <ng-template [ngIf]="show">
-    <div *ngFor="let thing of pers">
+    <div *ngFor="let thing of item">
       <p>{{thing.nombre}}</p>
       <p> {{thing.apellido}}</p>
       <p>  {{thing.edad}}</p>

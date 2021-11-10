@@ -16,7 +16,6 @@ export class UsuarioMostrarComponent implements OnInit {
 
   @Input() item = personaje
 
-  pers = personaje;
 
   show: boolean = false;
 
