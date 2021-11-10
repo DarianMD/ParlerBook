@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { personaje } from '../usuario-registro/usuario-registro.component';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-cpanel',
@@ -19,7 +20,26 @@ export class CpanelComponent implements OnInit  {
 
 
   del_usr(array: any){
-    personaje.splice(array,1)
+    Swal.fire({
+      title: 'Estas seguro?',
+      text: "Los datos no se podrán recuperar!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+
+        Swal.fire(
+          'Deleted!',
+          'Your file has been deleted.',
+          'success'
+        )
+        personaje.splice(array,1)
+
+      }
+    })
   }
 
 
