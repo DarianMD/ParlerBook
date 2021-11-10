@@ -18,6 +18,7 @@ export class UsuarioMostrarComponent implements OnInit {
 
 
   show: boolean = false;
+  usact: string = "prueba";
 
 
 }

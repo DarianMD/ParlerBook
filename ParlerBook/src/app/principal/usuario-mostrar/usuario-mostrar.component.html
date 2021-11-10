@@ -1,25 +1,25 @@
-<p>usuario-mostrar works!</p>
+
+      <div *ngFor="let usuario of item" class="contenedor">
+        <p><img class="imagen" src="https://avatars.dicebear.com/api/initials/'{{usuario.foto}}'.svg" alt="100" height="100" width="100"></p>
+
+        <p> {{ usuario.usuario }}</p>
+
+            <ng-template [ngIf]="show && usuario.usuario == usact ">
+            <p>{{usuario.nombre}}</p>
+            <p> {{usuario.apellido}}</p>
+            <p>  {{usuario.edad}}</p>
+            <p> {{usuario.descripcion}}</p>
+            <p>{{usuario.correo}}</p>
+            <p>{{usuario.contrasena}}</p>
+          </ng-template>
 
 
-<div *ngFor="let usuario of item">
-
-  <p> {{ usuario.usuario }}</p>
+        <button class="mostrar" (click)="show = !show; usact = usuario.usuario; ">Mostrar Datos</button>
 
 
-  <ng-template [ngIf]="show">
-    <div *ngFor="let thing of item">
-      <p>{{thing.nombre}}</p>
-      <p> {{thing.apellido}}</p>
-      <p>  {{thing.edad}}</p>
-      <p><img src="https://avatars.dicebear.com/api/initials/'{{thing.foto}}'.svg" alt="50" height="50" width="50"></p>
-      <p> {{thing.descripcion}}</p>
-      <p>{{thing.correo}}</p>
-      <p>{{thing.contrasena}}</p>
-    </div>
-  </ng-template>
-
-  <button class="mostrar" (click)="show = !show">Mostrar Datos</button>
+      </div>
 
 
 
-</div>
+
+

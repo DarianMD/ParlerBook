@@ -1,44 +1,54 @@
-<form (ngSumbit)="registro()" novalidate >
-  <p>Usuario</p>
-  <input type="text" placeholder="Ejemplo: UsuarioX" [(ngModel)]="this.regla.usuario" name="usuario" >
-  <p>Nombre</p>
-  <input type="text" placeholder="Ejemplo: Paco" [(ngModel)]="this.regla.nombre" name="nombre">
-  <p>Apellido</p>
-  <input type="text" placeholder="Ejemplo: Díaz" [(ngModel)]="this.regla.apellido" name="apellido">
-  <p>Edad</p>
-  <input type="text" placeholder="Ejemplo: 23" [(ngModel)]="this.regla.edad" name="edad">
-  <p>Descripcion</p>
-  <input type="text" placeholder="Ejemplo: Me gusta la música" [(ngModel)]="this.regla.descripcion" name="descripcion">
-  <p>Correo</p>
-  <input type="text" placeholder="Ejemplo: Me gusta la música" [(ngModel)]="this.regla.correo" name="descripcion">
-  <p>Contraseña</p>
-  <input type="text" placeholder="Ejemplo: Me gusta la música" [(ngModel)]="this.regla.contrasena" name="descripcion">
-  <p>Confirmar</p>
-  <input type="text" placeholder="Ejemplo: Me gusta la música" [(ngModel)]="conf_contr" name="descripcion">
-  <br>
-  <input type="submit" value="Registrar" (click)="realizar()">
 
-  <br>
-  <br>
+
+  <div class="flex-container">
+    <div class="content-container">
+      <div class="form-container">
+        <form (ngSumbit)="registro()" novalidate >
+          <h1>
+            Registro usuario
+          </h1>
+          <br>
+          <br>
+          <span class="subtitle">Usuario</span>
+          <br>
+          <input type="text" placeholder="Ejemplo: UsuarioX" [(ngModel)]="this.regla.usuario" name="usuario" >
+          <br>
+          <span class="subtitle">Nombre:</span>
+          <br>
+          <input type="text" placeholder="Ejemplo: Paco" [(ngModel)]="this.regla.nombre" name="usuario" >
+          <br>
+          <span class="subtitle">Apellido:</span>
+          <br>
+          <input type="text" placeholder="Ejemplo: Sanchez" [(ngModel)]="this.regla.apellido" name="usuario" >
+          <br>
+          <span class="subtitle">Edad</span>
+          <br>
+          <input type="text" placeholder="Ejemplo: 22" [(ngModel)]="this.regla.edad" name="usuario" >
+          <br>
+          <span class="subtitle">Descripcion:</span>
+          <br>
+          <input type="text" placeholder="Ejemplo: Me gusta jugar" [(ngModel)]="this.regla.descripcion" name="usuario" >
+          <br>
+          <span class="subtitle">Correo:</span>
+          <br>
+          <input type="text" placeholder="Ejemplo: pacosa@gmail.com" [(ngModel)]="this.regla.correo" name="usuario" >
+          <br>
+          <span class="subtitle">Contraseña:</span>
+          <br>
+          <input type="text" placeholder="Ejemplo: Pa.1.33444" [(ngModel)]="this.regla.contrasena" name="usuario" >
+          <br>
+          <span class="subtitle">Confirmar Contraseña:</span>
+          <br>
+          <input type="text" placeholder="Ejemplo: Pa.1.33444" [(ngModel)]="conf_contr" name="usuario" >
+          <br><br>
+
+          <input type="submit" value="Registrar" (click)="realizar()" class="submit-btn">
+        </form>
+      </div>
+    </div>
+  </div>
+
 
 <br>
 <br>
-<div *ngFor="let usuario of pers">
 
-  <p> {{ usuario.usuario }}</p>
-    <p>{{usuario.nombre}}</p>
-    <p> {{usuario.apellido}}</p>
-    <p>  {{usuario.edad}}</p>
-    <p><img src="https://avatars.dicebear.com/api/initials/'{{usuario.foto}}'.svg" alt="50" height="50" width="50"></p>
-    <p> {{usuario.descripcion}}</p>
-    <p>{{usuario.correo}}</p>
-    <p>{{usuario.contrasena}}</p>
-
-
-
-  <button (click)="del_usr(usuario)">Eliminar</button>
-
-
-
-
-</div>
