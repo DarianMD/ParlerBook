@@ -5,7 +5,6 @@ import Swal from 'sweetalert2';
 
 export let personaje: Usuario[] = [
 
-
 ];
 
 
