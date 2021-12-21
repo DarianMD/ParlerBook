@@ -20,7 +20,7 @@ export class contrasena{
       Swal.fire({
         icon: 'error',
         title: contrasena,
-        text: 'Minimo ' + reglas.cp_min_desc + ' caracteres'
+        text: 'Contraseña: Minimo ' + reglas.cp_min_desc + ' caracteres'
       })
       return false
     }
@@ -35,7 +35,7 @@ export class contrasena{
       Swal.fire({
         icon: 'error',
         title: contrasena,
-        text: 'Maximo ' + reglas.cp_max_usr + ' caracteres'
+        text: 'Contraseña: Maximo ' + reglas.cp_max_usr + ' caracteres'
       })
       return false
     }

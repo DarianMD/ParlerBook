@@ -21,7 +21,7 @@ export class apell{
     else{
       Swal.fire({
         icon: 'error',
-        title: apellido + 'El campo es vacio'
+        title: apellido + 'El campo apelleido esta vacio'
       })
       return false
     }
@@ -36,7 +36,7 @@ export class apell{
       Swal.fire({
         icon: 'error',
         title: apellido,
-        text: 'Maximo ' + reglas.cp_max_usr + ' caracteres'
+        text: 'Apellido: Maximo ' + reglas.cp_max_usr + ' caracteres'
       })
       return false
     }
@@ -52,7 +52,7 @@ export class apell{
       Swal.fire({
         icon: 'error',
         title: apellido,
-        text: 'Contiene caracteres invalidos'
+        text: 'Apellido: Contiene caracteres invalidos'
       })
       return false
     }

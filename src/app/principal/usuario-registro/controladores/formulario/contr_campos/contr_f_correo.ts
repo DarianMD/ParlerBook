@@ -19,7 +19,7 @@ export class correo{
     else{
       Swal.fire({
         icon: 'error',
-        title: desc + 'El campo es vacio'
+        title: desc + 'Correo: El campo esta vacio'
       })
       return false
     }
@@ -34,7 +34,7 @@ export class correo{
       Swal.fire({
         icon: 'error',
         title: desc,
-        text: 'Maximo ' + reglas.cp_max_usr + ' caracteres'
+        text: 'Correo: Maximo ' + reglas.cp_max_usr + ' caracteres'
       })
       return false
     }
@@ -49,7 +49,7 @@ export class correo{
       Swal.fire({
         icon: 'error',
         title: desc,
-        text: 'Contiene caracteres invalidos'
+        text: 'Correo: Contiene caracteres invalidos'
       })
       return false
     }

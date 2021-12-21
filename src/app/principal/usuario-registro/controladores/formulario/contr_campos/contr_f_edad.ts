@@ -17,7 +17,7 @@ export class edad{
     else{
       Swal.fire({
         icon: 'error',
-        title: edad + 'El campo es vacio'
+        title: edad + 'Edad: El campo es vacio'
       })
       return false
     }
@@ -32,7 +32,7 @@ export class edad{
       Swal.fire({
         icon: 'error',
         title: edad,
-        text: 'Maximo ' + reglas.cp_max_edad + ' caracteres'
+        text: 'Edad: Maximo ' + reglas.cp_max_edad + ' caracteres'
       })
       return false
     }
@@ -47,7 +47,7 @@ export class edad{
       Swal.fire({
         icon: 'error',
         title: edad,
-        text: 'No puedes introducir numeros negativos'
+        text: 'Edad: No puedes introducir numeros negativos'
       })
       return false
     }

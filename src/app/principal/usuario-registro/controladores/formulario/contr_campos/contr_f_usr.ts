@@ -24,7 +24,7 @@ export class usr{
     else{
       Swal.fire({
         icon: 'error',
-        title: usuario + 'El campo es vacio'
+        title: usuario + 'Usuario: El campo es vacio'
       })
       return false
     }
@@ -40,7 +40,7 @@ export class usr{
       Swal.fire({
         icon: 'error',
         title: usuario,
-        text: 'Maximo ' + reglas.cp_max_usr + ' caracteres'
+        text: 'Usuario: Maximo ' + reglas.cp_max_usr + ' caracteres'
       })
       return false
     }
@@ -56,7 +56,7 @@ export class usr{
       Swal.fire({
         icon: 'error',
         title: usuario,
-        text: 'Contiene caracteres invalidos'
+        text: 'Usuario: Contiene caracteres invalidos'
       })
       return false
     }

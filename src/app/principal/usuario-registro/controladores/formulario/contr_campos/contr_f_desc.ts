@@ -19,7 +19,7 @@ export class desc{
     else{
       Swal.fire({
         icon: 'error',
-        title: desc + 'El campo es vacio'
+        title: desc + 'Descripcion: El campo esta vacio'
       })
       return false
     }
@@ -34,7 +34,7 @@ export class desc{
       Swal.fire({
         icon: 'error',
         title: desc,
-        text: 'Maximo ' + reglas.cp_max_dec + ' caracteres'
+        text: 'Descripcion: Maximo ' + reglas.cp_max_dec + ' caracteres'
       })
       return false
     }
@@ -49,7 +49,7 @@ export class desc{
       Swal.fire({
         icon: 'error',
         title: desc,
-        text: 'Contiene caracteres invalidos'
+        text: 'Descripcion:  Contiene caracteres invalidos'
       })
       return false
     }
